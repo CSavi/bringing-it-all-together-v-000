@@ -69,11 +69,12 @@ class Dog
       dog = Dog.new(dog_data[0], dog_data[1], dog_data[2])
     else
       dog_data = Dog.create(name: name, breed: breed)
-    end     
+    end
   end
 
   def update
-
+    sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
 end
