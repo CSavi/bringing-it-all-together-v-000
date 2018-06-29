@@ -52,7 +52,13 @@ class Dog
     SQL
     DB[:conn].execute(sql, id).map do |row|
       self.new_from_db(row)
-    end.first    
+    end.first
+  end
+
+  def self.new_from_db(row)
+    new.id = row[0]
+    new.name = row[1]
+    new.breed = row[2]
   end
 
 end
