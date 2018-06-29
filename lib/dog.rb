@@ -62,4 +62,10 @@ class Dog
     self.new(id: id, name: name, breed: breed)
   end
 
+  def self.find_or_create_by(name:, breed:)
+  end
+
+  def update 
+  end
+
 end
