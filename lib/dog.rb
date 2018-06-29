@@ -77,8 +77,8 @@ class Dog
   def find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?"
     result = DB[:conn].execute(sql, name)[0]
-    binding.pry
     Dog.new(result)
+    binding.pry
   end
 
   def update
