@@ -56,9 +56,9 @@ class Dog
   end
 
   def self.new_from_db(row)
-    new.id = row[0]
-    new.name = row[1]
-    new.breed = row[2]
+    # new.id = row[0]
+    # new.name = row[1]
+    # new.breed = row[2]
     self.new(row[0], row[1], row[2])
   end
 
